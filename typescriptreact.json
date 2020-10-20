@@ -1,0 +1,27 @@
+{
+  "Import React": {
+    "prefix": "ir",
+    "body": ["import React from 'react';"],
+    "description": ""
+  },
+  "Import React With Hooks": {
+    "prefix": "irh",
+    "body": ["import React, {${1}} from 'react';"],
+    "description": ""
+  },
+  "Functional Component": {
+    "prefix": "fc",
+    "body": [
+      "function ${TM_FILENAME_BASE}() {",
+      "  return (",
+      "    <>",
+      "      ${1}",
+      "    </>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": ""
+  }
+}
