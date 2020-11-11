@@ -1,27 +1,84 @@
 {
   "Import React": {
-    "prefix": "ir",
+    "prefix": "imr",
     "body": ["import React from 'react';"],
     "description": ""
   },
   "Import React With Hooks": {
-    "prefix": "irh",
+    "prefix": "imrh",
     "body": ["import React, {${1}} from 'react';"],
     "description": ""
   },
   "Functional Component": {
     "prefix": "fc",
     "body": [
-      "function ${TM_FILENAME_BASE}() {",
+      "function ${TM_FILENAME_BASE}(${1}) {",
       "  return (",
       "    <>",
-      "      ${1}",
+      "      ${2}",
       "    </>",
       "  )",
       "}",
       "",
       "export default ${TM_FILENAME_BASE};"
     ],
+    "description": ""
+  },
+  "Styled Functional Component": {
+    "prefix": "sfc",
+    "body": [
+      "import React from 'react';",
+      "import styled from \"styled-components\";",
+      "",
+      "const ${TM_FILENAME_BASE}Block = styled.div``",
+      "",
+      "function ${TM_FILENAME_BASE}() {",
+      "  return (",
+      "    <${TM_FILENAME_BASE}Block>",
+      "      ${1}",
+      "    </${TM_FILENAME_BASE}Block>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": ""
+  },
+  "Styled Functional Component With Props": {
+    "prefix": "sfcp",
+    "body": [
+      "import React from 'react';",
+      "import styled from \"styled-components\";",
+      "",
+      "const ${TM_FILENAME_BASE}Block = styled.div``",
+      "",
+      "type ${TM_FILENAME_BASE}Props = {}",
+      "",
+      "function ${TM_FILENAME_BASE}({}:${TM_FILENAME_BASE}Props) {",
+      "  return (",
+      "    <${TM_FILENAME_BASE}Block>",
+      "      ${1}",
+      "    </${TM_FILENAME_BASE}Block>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": ""
+  },
+  "React Element": {
+    "prefix": "re",
+    "body": ["<${1} />"],
+    "description": ""
+  },
+  "React Element With Children": {
+    "prefix": "rec",
+    "body": ["<${1} ${2}> ${3} <${TM_SELECTED_TEXT}/>"],
+    "description": ""
+  },
+  "Styled Component": {
+    "prefix": "stc",
+    "body": ["", "const ${1} = styled.${2}`", "  ${3}", "`"],
     "description": ""
   }
 }

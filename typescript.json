@@ -1,0 +1,61 @@
+{
+  "Redux Ducks ": {
+    "prefix": "redux ducks",
+    "body": [
+      "// actions",
+      "const ACTION = \"${TM_FILENAME_BASE}/ACTION\" as const;",
+      "type Action = ReturnType<typeof action>;",
+      "",
+      "// action creators",
+      "export const action = (payload: any) => ({",
+      "  type: ACTION,",
+      "  payload",
+      "});",
+      "",
+      "// reducer",
+      "type ReducerState = {};",
+      "const initialState: ReducerState = {};",
+      "function ${TM_FILENAME_BASE}(",
+      "  state: ReducerState = initialState,",
+      "  action: Action",
+      "): ReducerState {",
+      "  switch (action.type) {",
+      "    case ACTION:",
+      "      return {};",
+      "    default:",
+      "      return state;",
+      "  }",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};",
+      ""
+    ],
+    "description": ""
+  },
+  "Redux Root Reducer": {
+    "prefix": "redux root reducer",
+    "body": [
+      "import { combineReducers } from \"redux\";",
+      "",
+      "const rootReducer = combineReducers({});",
+      "",
+      "export default rootReducer;",
+      ""
+    ],
+    "description": ""
+  },
+  "Redux App Index": {
+    "prefix": "redux config app index",
+    "body": [
+      "import {Provider} from \"react-redux\";",
+      "import {createStore} from \"redux\";",
+      "import {composeWithDevTools} from \"redux-devtools-extension\";",
+      "import rootReducer from \"./modules\"",
+      "",
+      "// Inject this using Provider",
+      "// <Provider store={store}> children </Provider>",
+      "const store = createStore(rootReducer,composeWithDevTools());"
+    ],
+    "description": ""
+  }
+}
