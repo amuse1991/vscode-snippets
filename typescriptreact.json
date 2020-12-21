@@ -4,6 +4,11 @@
     "body": ["import React from 'react';"],
     "description": ""
   },
+  "Import Styled Component Native": {
+    "prefix": "imsn",
+    "body": ["import Styled from 'styled-components/native';"],
+    "description": ""
+  },
   "Import React With Hooks": {
     "prefix": "imrh",
     "body": ["import React, {${1}} from 'react';"],
